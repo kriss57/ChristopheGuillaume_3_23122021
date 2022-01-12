@@ -1,0 +1,10 @@
+header {
+  height: 70px;
+  @include flexbox;
+  position: relative;
+  .fa-arrow-left {
+    position: absolute;
+    left: 30px;
+    top: 25px;
+  }
+}

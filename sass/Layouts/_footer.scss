@@ -1,0 +1,39 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  background-color: rgb(42, 42, 42);
+  color: white;
+  @media screen and (min-width: 992px) {
+    align-items: center;
+  }
+  h3 {
+    padding-left: 20px;
+    margin-bottom: 0px;
+    font-family: "Shrikhand";
+    font-weight: lighter;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    list-style: none;
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+    }
+    li {
+      padding-bottom: 10px;
+      padding-right: 100px;
+    }
+    i {
+      padding-right: 5px;
+    }
+    a {
+      color: white;
+    }
+    .fa-rotate-45 {
+      margin-left: -7px;
+      @include rotate;
+    }
+  }
+}

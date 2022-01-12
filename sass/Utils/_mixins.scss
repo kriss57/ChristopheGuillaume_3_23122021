@@ -1,0 +1,40 @@
+@mixin rotate($rotation: 160deg) {
+  -webkit-transform: rotate($rotation);
+  -moz-transform: rotate($rotation);
+  -ms-transform: rotate($rotation);
+  -o-transform: rotate($rotation);
+  transform: rotate($rotation);
+}
+
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexbox2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@mixin btn {
+  color: white;
+  border-radius: 30px;
+  font-size: 14px;
+  width: 200px;
+  height: 45px;
+  border: none;
+  background: $color-gradient;
+  @include auto-box-shadow($grey-light);
+}
+
+@mixin auto-box-shadow($colour) {
+  @if (lightness($colour) < 35%) {
+    $colour: lighten($colour, 10%);
+  } @else {
+    $colour: darken($colour, 15%);
+  }
+  box-shadow: 4px 7px 10px $colour;
+}
