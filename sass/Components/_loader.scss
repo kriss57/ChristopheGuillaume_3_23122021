@@ -13,7 +13,7 @@
   text-align: center;
   width: 100%;
   text-align: center;
-  animation: visible 2s;
+  animation: visible 2s linear;
 
   top: 0;
   left: 0;
@@ -21,10 +21,10 @@
   position: fixed;
   visibility: hidden;
 
-  .loader-quart {
+  .loader-circle {
     border-radius: 90px;
     border: 3px solid rgb(228, 228, 243);
-    animation: spin 3s linear infinite;
+    animation: spin 3s linear;
 
     &:after {
       content: "";
@@ -48,7 +48,7 @@
       border-top-color: $secondary;
       border-bottom-color: rgb(156, 222, 226);
       border-radius: 90px;
-      animation: spin 3s linear infinite;
+      animation: spin 3s linear;
     }
   }
 }

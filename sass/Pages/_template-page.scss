@@ -1,0 +1,224 @@
+/* ********** page 2 ********* */
+/************        ********* */
+
+.backround-image {
+  position: relative;
+}
+.backround-image img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+main {
+  width: 100%;
+}
+#main-page2 {
+  @media screen and (min-width: 992px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: auto;
+    background-color: $grey-light;
+  }
+}
+
+/* ******** titre restaurant + coeur ******** */
+
+.title-restaurant {
+  @include flexbox;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  margin-top: -50px;
+  justify-content: space-between;
+  padding-top: 5px;
+
+  border-radius: 30px 30px 0 0;
+  background-color: $grey-light;
+  @media screen and (min-width: 992px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+  }
+
+  h2 {
+    font-family: "Shrikhand";
+    padding-left: 20px;
+    font-size: 27px;
+  }
+  i {
+    margin-right: 35px;
+  }
+}
+
+/* ****** Entrées ****** */
+.menu {
+  @include flexbox2;
+  height: 350px;
+  background-color: $grey-light;
+  padding-top: 20px;
+  @media screen and (min-width: 992px) {
+    width: 45%;
+    margin: auto;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    align-self: start;
+    font-weight: 100;
+    font-size: 17px;
+    padding-left: 25px;
+    position: relative;
+    &::before {
+      content: "";
+      width: 45px;
+      height: 3px;
+      background-color: $tertiary;
+      position: absolute;
+      bottom: -10px;
+    }
+  }
+  .bloc-menu {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 90%;
+    max-width: 500px;
+    height: 70px;
+    background-color: white;
+    overflow: hidden;
+    transition: 0.9s;
+    @include auto-box-shadow(white);
+    border-radius: 15px;
+    &:hover .validation {
+      animation: slide-left 0.5s both;
+      display: block;
+    }
+    .description-menu {
+      padding: 10px;
+      width: 80%;
+      overflow: hidden;
+      white-space: nowrap;
+
+      .principal {
+        padding-bottom: 5px;
+        font-size: 20px;
+        font-weight: 800;
+      }
+      p {
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .price {
+      margin: 40px 20px;
+    }
+    .validation {
+      height: 100%;
+      width: 65px;
+      background-color: $tertiary;
+      display: none;
+      transition: 1s;
+    }
+    .fa-check-circle {
+      font-size: 25px;
+      padding: 20px;
+      color: white;
+      animation: rotate-icon 0.5s;
+    }
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-icon {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* ***** bouton commander ******* */
+
+.command-btn {
+  height: 100px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: $grey-light;
+  @include flexbox;
+  @media screen and (min-width: 992px) {
+    width: 100%;
+  }
+
+  .btn {
+    @include btn;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+      transition: 0.4s;
+      box-shadow: 4px 7px 15px gray;
+    }
+  }
+}
+
+// **************spinner ********** //
+
+//**********************animation menu page 2************//
+@keyframes not-visible {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#meal-1 {
+  animation: not-visible 1s both;
+  animation-delay: 0.1s;
+}
+#meal-2 {
+  animation: not-visible 1s both;
+  animation-delay: 0.2s;
+}
+#meal-3 {
+  animation: not-visible 1s both;
+  animation-delay: 0.3s;
+}
+#meal-4 {
+  animation: not-visible 1s both;
+  animation-delay: 0.4s;
+}
+#meal-5 {
+  animation: not-visible 1s both;
+  animation-delay: 0.5s;
+}
+#meal-6 {
+  animation: not-visible 1s both;
+  animation-delay: 0.6s;
+}
+#meal-7 {
+  animation: not-visible 1s both;
+  animation-delay: 0.7s;
+}
+#meal-8 {
+  animation: not-visible 1s both;
+  animation-delay: 0.8s;
+}
+#meal-9 {
+  animation: not-visible 1s both;
+  animation-delay: 0.9s;
+}
