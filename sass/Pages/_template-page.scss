@@ -13,6 +13,7 @@ main {
   width: 100%;
 }
 #main-page2 {
+  max-width: 1440px;
   @media screen and (min-width: 992px) {
     display: flex;
     flex-wrap: wrap;
@@ -32,7 +33,7 @@ main {
   margin-top: -50px;
   justify-content: space-between;
   padding-top: 5px;
-
+  max-width: 1440px;
   border-radius: 30px 30px 0 0;
   background-color: $grey-light;
   @media screen and (min-width: 992px) {
@@ -52,6 +53,12 @@ main {
 }
 
 /* ****** Entrées ****** */
+#starter {
+  height: 420px;
+  @media screen and (min-width: 992px) {
+    margin-top: 35px;
+  }
+}
 .menu {
   @include flexbox2;
   height: 350px;
@@ -91,8 +98,8 @@ main {
     @include auto-box-shadow(white);
     border-radius: 15px;
     &:hover .validation {
-      animation: slide-left 0.5s both;
       display: block;
+      animation: slide-left 0.7s both;
     }
     .description-menu {
       padding: 10px;
@@ -119,7 +126,6 @@ main {
       width: 65px;
       background-color: $tertiary;
       display: none;
-      transition: 1s;
     }
     .fa-check-circle {
       font-size: 25px;
@@ -219,6 +225,10 @@ main {
   animation-delay: 0.8s;
 }
 #meal-9 {
+  animation: not-visible 1s both;
+  animation-delay: 0.9s;
+}
+#meal-10 {
   animation: not-visible 1s both;
   animation-delay: 0.9s;
 }

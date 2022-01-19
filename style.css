@@ -224,7 +224,11 @@ form p {
 
 /* section-utilisation */
 .utilisation h2 {
+  padding-top: 30px;
   padding-left: 20px;
+  padding-bottom: 15px;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .bloc-cases {
@@ -242,6 +246,8 @@ form p {
       justify-content: space-around;
   height: 250px;
   padding-bottom: 30px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 @media screen and (min-width: 992px) {
@@ -309,6 +315,7 @@ form p {
 /* ********** ARTICLE CARTE *********** */
 article {
   width: 100%;
+  max-width: 1440px;
   background-color: #f2f2f2;
   padding: 30px 0 40px 0;
 }
@@ -358,7 +365,7 @@ a {
   }
 }
 
-.card {
+.restaurant-fav {
   background-color: white;
   -webkit-box-shadow: 4px 7px 10px #d9d9d9;
           box-shadow: 4px 7px 10px #d9d9d9;
@@ -370,16 +377,15 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
-  .card {
+  .restaurant-fav {
     width: 42%;
     height: 300px;
     margin: auto;
     margin-bottom: 40px;
-    padding-bottom: 20px;
   }
 }
 
-.card img {
+.restaurant-fav .card img {
   width: 100%;
   height: 220px;
   -o-object-fit: cover;
@@ -388,21 +394,21 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
-  .card img {
+  .restaurant-fav .card img {
     height: 280px;
   }
 }
 
-.card h3 {
+.restaurant-fav .card h3 {
   margin: 0;
 }
 
-.card p {
+.restaurant-fav .card p {
   margin: 0;
   padding: 5px 0 10px 0;
 }
 
-.card__description {
+.restaurant-fav .card__description {
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -412,7 +418,7 @@ a {
           justify-content: space-between;
 }
 
-.card__description .stickers {
+.restaurant-fav .card__description .stickers {
   position: absolute;
   border-radius: 2px;
   top: 10px;
@@ -420,6 +426,12 @@ a {
   padding: 5px 10px;
   background-color: #99e2d0;
   color: green;
+}
+
+.position-coeur {
+  position: absolute;
+  bottom: 35px;
+  right: 20px;
 }
 
 .heart {
@@ -438,6 +450,17 @@ a {
 .heart label input[type="checkbox"]:checked ~ .coeur2 {
   -webkit-animation: scale-heart2 0.5s both;
           animation: scale-heart2 0.5s both;
+}
+
+@media screen and (min-width: 1200px) {
+  .heart label input[type="checkbox"]:hover ~ .coeur1 {
+    -webkit-animation: opacity-heart1 0.5s both;
+            animation: opacity-heart1 0.5s both;
+  }
+  .heart label input[type="checkbox"]:hover ~ .coeur2 {
+    -webkit-animation: scale-heart2 0.5s both;
+            animation: scale-heart2 0.5s both;
+  }
 }
 
 .heart .coeur1 {
@@ -519,6 +542,10 @@ main {
   width: 100%;
 }
 
+#main-page2 {
+  max-width: 1440px;
+}
+
 @media screen and (min-width: 992px) {
   #main-page2 {
     display: -webkit-box;
@@ -551,6 +578,7 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 5px;
+  max-width: 1440px;
   border-radius: 30px 30px 0 0;
   background-color: #f2f2f2;
 }
@@ -577,6 +605,16 @@ main {
 }
 
 /* ****** Entrées ****** */
+#starter {
+  height: 420px;
+}
+
+@media screen and (min-width: 992px) {
+  #starter {
+    margin-top: 35px;
+  }
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -643,9 +681,9 @@ main {
 }
 
 .menu .bloc-menu:hover .validation {
-  -webkit-animation: slide-left 0.5s both;
-          animation: slide-left 0.5s both;
   display: block;
+  -webkit-animation: slide-left 0.7s both;
+          animation: slide-left 0.7s both;
 }
 
 .menu .bloc-menu .description-menu {
@@ -676,8 +714,6 @@ main {
   width: 65px;
   background-color: #99e2d0;
   display: none;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .menu .bloc-menu .fa-check-circle {
@@ -863,6 +899,13 @@ main {
 }
 
 #meal-9 {
+  -webkit-animation: not-visible 1s both;
+          animation: not-visible 1s both;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+#meal-10 {
   -webkit-animation: not-visible 1s both;
           animation: not-visible 1s both;
   -webkit-animation-delay: 0.9s;
