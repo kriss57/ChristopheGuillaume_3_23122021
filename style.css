@@ -23,8 +23,8 @@
   text-align: center;
   width: 100%;
   text-align: center;
-  -webkit-animation: visible 2s linear;
-          animation: visible 2s linear;
+  -webkit-animation: visible 3s linear;
+          animation: visible 3s linear;
   top: 0;
   left: 0;
   z-index: 200;
@@ -153,7 +153,8 @@ body h1 {
   font-weight: normal;
 }
 
-/* future formulaire */
+/***************************************/
+/* ******* future formulaire ********* */
 form {
   height: 50px;
   background: -webkit-gradient(linear, left top, left bottom, from(#acaaaa), color-stop(10%, #ebeaea));
@@ -178,6 +179,7 @@ form p {
   color: dimgray;
 }
 
+/****************************************************/
 /* ******** section présentation + boutton ******** */
 .présentation {
   height: 250px;
@@ -222,7 +224,8 @@ form p {
           box-shadow: 4px 7px 18px gray;
 }
 
-/* section-utilisation */
+/***********************************************/
+/* ************ section-utilisation ********** */
 .utilisation h2 {
   padding-top: 30px;
   padding-left: 20px;
@@ -312,6 +315,7 @@ form p {
   color: dimgray;
 }
 
+/****************************************/
 /* ********** ARTICLE CARTE *********** */
 article {
   width: 100%;
@@ -477,6 +481,7 @@ a {
           transform: scale(0);
   background-image: linear-gradient(353deg, #9356dc 30%, #ff79da 100%);
   background-size: 100%;
+  background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transition: -webkit-transform 0.2s;
@@ -485,6 +490,8 @@ a {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
+/***************************************************/
+/* ******* Animation double coeur favoris ******** */
 @-webkit-keyframes opacity-heart1 {
   0% {
     opacity: 1;
@@ -493,7 +500,6 @@ a {
     opacity: 0;
   }
 }
-
 @keyframes opacity-heart1 {
   0% {
     opacity: 1;
@@ -604,7 +610,8 @@ main {
   margin-right: 35px;
 }
 
-/* ****** Entrées ****** */
+/********************************************************/
+/* ************* Entrée , plats , desserts ************ */
 #starter {
   height: 420px;
 }
@@ -680,10 +687,13 @@ main {
   border-radius: 15px;
 }
 
-.menu .bloc-menu:hover .validation {
-  display: block;
-  -webkit-animation: slide-left 0.7s both;
-          animation: slide-left 0.7s both;
+.menu .bloc-menu:hover .validation-price {
+  margin-right: 31px;
+}
+
+.menu .bloc-menu:hover .fa-check-circle {
+  -webkit-animation: rotate-icon 0.25s 0.2s ease-in-out;
+          animation: rotate-icon 0.25s 0.2s ease-in-out;
 }
 
 .menu .bloc-menu .description-menu {
@@ -705,49 +715,31 @@ main {
   text-overflow: ellipsis;
 }
 
-.menu .bloc-menu .price {
+.menu .bloc-menu .validation-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: margin-right 0.3s ease-in-out;
+  transition: margin-right 0.3s ease-in-out;
+  margin-right: -33px;
+  width: 100px;
+}
+
+.menu .bloc-menu .validation-price .price {
   margin: 40px 20px;
+  width: 36px;
 }
 
-.menu .bloc-menu .validation {
+.menu .bloc-menu .validation-price .validation {
   height: 100%;
-  width: 65px;
+  width: 64px;
   background-color: #99e2d0;
-  display: none;
 }
 
-.menu .bloc-menu .fa-check-circle {
+.menu .bloc-menu .validation-price .fa-check-circle {
   font-size: 25px;
   padding: 20px;
   color: white;
-  -webkit-animation: rotate-icon 0.5s;
-          animation: rotate-icon 0.5s;
-}
-
-@-webkit-keyframes slide-left {
-  0% {
-    -webkit-transform: translateX(20%);
-            transform: translateX(20%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-left {
-  0% {
-    -webkit-transform: translateX(20%);
-            transform: translateX(20%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
 }
 
 @-webkit-keyframes rotate-icon {
@@ -772,6 +764,7 @@ main {
   }
 }
 
+/**********************************/
 /* ***** bouton commander ******* */
 .command-btn {
   height: 100px;
@@ -816,6 +809,8 @@ main {
           box-shadow: 4px 7px 15px gray;
 }
 
+/********************************************************/
+/**********************animation menu page 2************/
 @-webkit-keyframes not-visible {
   0% {
     opacity: 0;
@@ -828,7 +823,6 @@ main {
             transform: translateY(0);
   }
 }
-
 @keyframes not-visible {
   0% {
     opacity: 0;

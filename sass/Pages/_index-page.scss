@@ -1,4 +1,5 @@
-/* future formulaire */
+/***************************************/
+/* ******* future formulaire ********* */
 form {
   height: 50px;
   background: linear-gradient(180deg, #acaaaa 0%, #ebeaea 10%);
@@ -12,6 +13,7 @@ form {
     color: dimgray;
   }
 }
+/****************************************************/
 /* ******** section présentation + boutton ******** */
 .présentation {
   height: 250px;
@@ -38,7 +40,8 @@ form {
     }
   }
 }
-/* section-utilisation */
+/***********************************************/
+/* ************ section-utilisation ********** */
 .utilisation {
   h2 {
     padding-top: 30px;
@@ -89,6 +92,7 @@ form {
     }
   }
 }
+/****************************************/
 /* ********** ARTICLE CARTE *********** */
 
 article {
@@ -202,13 +206,14 @@ a {
     transform: scale(0);
     background-image: $color-gradient;
     background-size: 100%;
+    background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: transform 0.2s;
   }
 }
-
-// Animation double coeur favoris //
+/***************************************************/
+/* ******* Animation double coeur favoris ******** */
 
 @keyframes opacity-heart1 {
   0% {
