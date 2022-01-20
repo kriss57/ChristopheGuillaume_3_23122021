@@ -432,6 +432,8 @@ a {
   color: green;
 }
 
+/*******************************************************/
+/* ************* coeur favori aniamtion ************** */
 .position-coeur {
   position: absolute;
   bottom: 35px;
@@ -565,7 +567,8 @@ main {
   }
 }
 
-/* ******** titre restaurant + coeur ******** */
+/********************************************/
+/* ******** titre restaurant ************** */
 .title-restaurant {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -742,6 +745,8 @@ main {
   color: white;
 }
 
+/*****************************************************/
+/* *********** animation icone du slider *********** */
 @-webkit-keyframes rotate-icon {
   0% {
     -webkit-transform: rotate(-180deg);
@@ -752,7 +757,6 @@ main {
             transform: rotate(0deg);
   }
 }
-
 @keyframes rotate-icon {
   0% {
     -webkit-transform: rotate(-180deg);

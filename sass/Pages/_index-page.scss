@@ -169,6 +169,8 @@ a {
     }
   }
 }
+/*******************************************************/
+/* ************* coeur favori aniamtion ************** */
 .position-coeur {
   position: absolute;
   bottom: 35px;
@@ -201,7 +203,6 @@ a {
   .coeur2 {
     z-index: 0;
     right: inherit;
-
     font-size: 30px;
     transform: scale(0);
     background-image: $color-gradient;

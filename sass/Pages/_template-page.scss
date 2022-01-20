@@ -22,8 +22,8 @@ main {
     background-color: $grey-light;
   }
 }
-
-/* ******** titre restaurant + coeur ******** */
+/********************************************/
+/* ******** titre restaurant ************** */
 
 .title-restaurant {
   @include flexbox;
@@ -99,11 +99,11 @@ main {
     border-radius: 15px;
     &:hover {
       .validation-price {
-        margin-right: 31px;
+        margin-right: 31px; // décalage a gauche du slider //
       }
 
       .fa-check-circle {
-        animation: rotate-icon 0.25s 0.2s ease-in-out;
+        animation: rotate-icon 0.25s 0.2s ease-in-out; // icone du slider //
       }
     }
 
@@ -126,8 +126,8 @@ main {
     }
     .validation-price {
       display: flex;
-      transition: margin-right 0.3s ease-in-out;
-      margin-right: -33px;
+      transition: margin-right 0.3s ease-in-out; // animation slider //
+      margin-right: -33px; // décalage a droite du slider//
       width: 100px;
       .price {
         margin: 40px 20px;
@@ -146,6 +146,8 @@ main {
     }
   }
 }
+/*****************************************************/
+/* *********** animation icone du slider *********** */
 
 @keyframes rotate-icon {
   0% {
@@ -181,6 +183,7 @@ main {
 
 /********************************************************/
 /**********************animation menu page 2************/
+
 @keyframes not-visible {
   0% {
     opacity: 0;
